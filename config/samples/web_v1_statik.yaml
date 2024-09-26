@@ -1,0 +1,9 @@
+apiVersion: web.dyatlov.net/v1
+kind: Statik
+metadata:
+  labels:
+    app.kubernetes.io/name: statik
+    app.kubernetes.io/managed-by: kustomize
+  name: statik-sample
+spec:
+  # TODO(user): Add fields here

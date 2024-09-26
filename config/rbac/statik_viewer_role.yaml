@@ -1,0 +1,23 @@
+# permissions for end users to view statiks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: statik
+    app.kubernetes.io/managed-by: kustomize
+  name: statik-viewer-role
+rules:
+- apiGroups:
+  - web.dyatlov.net
+  resources:
+  - statiks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - web.dyatlov.net
+  resources:
+  - statiks/status
+  verbs:
+  - get
